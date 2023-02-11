@@ -7,6 +7,22 @@ connmanctl services
 sudo connmanctl config ethernet_88c2556c4fee_cable --ipv4 manual 192.168.1.10 255.255.255.0 192.168.1.1 --nameservers 8.8.8.8 8.8.4.4
 ```
 
+### Setup ddclient to update dynamic DNS
+
+```
+sudo apt-get install ddclient
+```
+see [tutorial](https://serdima.wordpress.com/2018/04/23/tutorial-updating-dynamic-dns-with-ddclient/)
+
+```
+protocol=dyndns2
+use=web, web=checkip.dyndns.com, web-skip='IP Address'
+server=api.dynu.com
+login=nielsen74
+password='<password>'
+giessinglund.freeddns.org
+```
+
 ### Mount USB harddisk
 
 Add NTFS support (Not sure this was required)
