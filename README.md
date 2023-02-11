@@ -32,4 +32,11 @@ Edit /etc/fstab
 sudo apt-get update
 sudo apt-get install samba
 ```
+Edit /etc/samba/smb.conf add
+```
+[Media]
+path = /media/usb
+writable = yes
+guest ok = yes
+```
 
