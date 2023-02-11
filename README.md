@@ -40,3 +40,13 @@ writable = yes
 guest ok = yes
 ```
 
+
+### Mount other smb share
+
+```
+sudo apt-get install cifs-utils
+cd /mnt
+sudo mkdir Public
+sudo mount -t cifs //192.168.1.100/Public /mnt/Public
+```
+
