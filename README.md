@@ -54,8 +54,17 @@ Edit /etc/samba/smb.conf add
 path = /media/usb
 writable = yes
 guest ok = yes
+
+[Private]
+path = /media/usb
+writable = yes
+guest ok = no
+write list = root, debian
 ```
 
+```
+$ sudo smbpasswd -a debian
+```
 
 ### Mount other smb share
 
